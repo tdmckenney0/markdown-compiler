@@ -1,0 +1,7 @@
+# Config Files
+*.csv
+
+# Compiled Documents
+*.odt
+*.pdf
+*.docx
