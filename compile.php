@@ -8,14 +8,14 @@ $config = 'compile.csv';
 $output = 'output.odt';
 $exclude = 'exclude.csv';
 $margin = '0.5in';
-$wd = '..'; // Working Directory
+$wd = '.'; // Working Directory
 
 if(!function_exists('readline')) {
-  function readline( $prompt = '> ' )
-  {
-    echo $prompt;
-    return rtrim(fgets(STDIN), "\n");
-  }
+    function readline( $prompt = '> ' )
+    {
+        echo $prompt;
+        return rtrim(fgets(STDIN), "\n");
+    }
 }
 
 if($argc > 1) {
@@ -26,10 +26,6 @@ if($argc > 1) {
         $config = $options['c'];
     } else {
         exit("Provide a Config file. `compile.php -c example.csv`" . PHP_EOL);
-    }
-
-    if(!empty($options['x'])) {
-
     }
 
     if(!empty($options['o'])) {
@@ -108,7 +104,6 @@ if($argc > 1) {
         '',
         ''
     );
-
 
     echo implode(PHP_EOL, $lines);
 }
