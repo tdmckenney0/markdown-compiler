@@ -71,18 +71,12 @@ if($argc > 1) {
         $lines = array();
 
         foreach($reg as $name => $obj) {
-
             $lines[] =  $name;
-
         }
 
         $lines = implode(PHP_EOL, $lines);
 
         $w = readline("Write to " . $config .  "? ");
-
-        if(!chdir(__DIR__)) {
-            exit("Could not change to compiler directory...");
-        }
 
         if(stristr($w, 'Y')) {
             file_put_contents($config, $lines);
